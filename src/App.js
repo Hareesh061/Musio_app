@@ -2,12 +2,14 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
+  const [albums,setTracks] = useState([])
 
-  const [tracks,setTracks] = useState([])
-
-  const getTracks =() =>{
-
-  }
+  const getTracks = async() =>{
+    let data = await fetch("https://v1.nocodeapi.com/harry019/spotify/cOHqTEjyYXbOrdMS/search?q=daku");
+    let convertedData = await data.json();
+    console.log(convertedData.albums.items);
+    setTracks(convertedData.albums.items);
+  };
 
   return <>
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -42,11 +44,14 @@ function App() {
 
  <div className="container">
   <div className="row">
+    <div className="col">
+      <button onClick={getTracks} className="btn btn-primary">get data</button>
+    </div>
 
   </div>
  </div>
   </>
-
+  
 }
 
 export default App;
