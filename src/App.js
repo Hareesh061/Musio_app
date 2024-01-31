@@ -5,7 +5,7 @@ function App() {
   const [albums,setTracks] = useState([])
 
   const getTracks = async() =>{
-    let data = await fetch("https://v1.nocodeapi.com/harry019/spotify/cOHqTEjyYXbOrdMS/search?q=daku");
+    let data = await fetch("https://v1.nocodeapi.com/harry019/spotify/cOHqTEjyYXbOrdMS/search?q=<q>");
     let convertedData = await data.json();
     console.log(convertedData.albums.items);
     setTracks(convertedData.albums.items);
@@ -41,42 +41,30 @@ function App() {
   
   </div>
 </nav>
-
- <div className="container">
-  <div className="row">
-    <div className="col">
+<div className="col">
       <button onClick={getTracks} className="btn btn-primary ">get data</button>
     </div>
+ <div className="container">
+  <div className="row">
+   
    {
     albums.map((element) => {
       return (
       <div key={element.id} className="col">
-        {/* <img
-        className="border-2 w-100"
-        src={element.images[0].url} 
-        alt="img"/>
-
-        <p>{element.id}</p> */}
-
-
 
         <div className="card" style={{ width: "18rem" }}>
   <img className="card-img-top" src={element.images[0].url} alt="Card image cap" />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
+    <h5 className="card-title">{element.name}</h5>
     <p className="card-text">
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      Artist:  {element.artists[0].name}
     </p>
+    <audio src={element.external_urls }  controls className="w-100"></audio>
     <a href="#" className="btn btn-primary">
       Go somewhere
     </a>
   </div>
 </div>
-
-
-
-
 
         </div>
       );
