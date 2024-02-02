@@ -3,31 +3,24 @@ import { useState } from 'react';
 
 function App() {
   const   [keyword, setKeyword] = useState("");
-  const [albums,setTracks] = useState([])
+  const [albums,setTracks] = useState([]);
+
+ 
 
   const getTracks = async() =>{
     let data = await fetch(`https://v1.nocodeapi.com/harry019/spotify/cOHqTEjyYXbOrdMS/search?q=${keyword}`);
     let convertedData = await data.json();
     console.log(convertedData.albums.items);
     setTracks(convertedData.albums.items);
+  
   };
 
-  return <>
+  return (<>
 <nav className="navbar navbar-dark navbar-expand-lg navbar-light bg-dark">
   <a className="navbar-brand" href="#">
     Musio.co
   </a>
-  <button
-    className="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span className="navbar-toggler-icon" />
-  </button>
+ 
   <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
     
       <input
@@ -35,7 +28,7 @@ function App() {
       onChange={event=>setKeyword(event.target.value)}
         className="form-control mr-2 w-50"
         type="search"
-        placeholder="Search your  music here..."
+        placeholder="Search your music name here..."
         aria-label="Search"
       />
       <button onClick={getTracks} className="btn btn-outline-success " >
@@ -73,7 +66,7 @@ function App() {
   </div>
  </div>
   </>
-  
+  );
 }
 
 export default App;
