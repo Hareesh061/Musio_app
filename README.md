@@ -5,6 +5,11 @@
 # Musio.co - Spotify Music Search App
 **This is a simple React application named Musio.co that allows users to search for music on Spotify using the Spotify API. It displays the album information along with a preview audio player for each track.**
 
+
+# Demo link: https://scintillating-swan-7e5b8a.netlify.app
+
+
+
 Features:
 
 **Navbar:**
