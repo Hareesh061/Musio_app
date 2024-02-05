@@ -38,7 +38,7 @@ The application features an audio player for each track with controls for playin
 2. React Hooks (useState)
 3. Spotify API
 
-Note:
+# Note:
 1. Make sure to replace "https://v1.nocodeapi.com/harry019/spotify/cOHqTEjyYXbOrdMS" with your own Spotify API endpoint in the getTracks function.
 2. I do not put the playable list in the project😁😁😁. 
 
