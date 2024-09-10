@@ -8,7 +8,7 @@
 
 # Demo link: https://scintillating-swan-7e5b8a.netlify.app
 
-# Diployed on this IP: 52.200.172.228:3000 (AWS, EC2)
+# Deployed on this IP: 52.200.172.228:3000 (AWS, EC2)
 
 
 
