@@ -1,6 +1,6 @@
 # Musio.co app
 
-**Creating simple music application using react.js, html, css, js and bootstrap, AWS.**
+**Creating a simple music application using React.js, HTML, CSS, js and Bootstrap, AWS.**
 
 # Musio.co - Spotify Music Search App
 **This is a simple React application named Musio.co that allows users to search for music on Spotify using the Spotify API. It displays the album information along with a preview audio player for each track.**
@@ -61,4 +61,4 @@ Feel free to customize and enhance the application based on your requirements.
 <img width="101" alt="image" src="https://github.com/Hareesh061/Musio_app/assets/90563881/ec4a0bb2-6a36-4009-82d6-9bbb5eb57fb2">
 
 
-**Keep Learning and make your hands-on☺️🤗🙂** 
+**Keep Learning☺️🤗🙂** 
